@@ -12,7 +12,7 @@
 
 const gulp						= require('gulp'),
 			gulpif					= require('gulp-if'),
-			
+
 			// Hader & Notifications
 			header					= require('gulp-header'),
 			notify					= require('gulp-notify'),
@@ -41,26 +41,26 @@ const gulp						= require('gulp'),
 			// Settings
 			filename				= 'master',
 			isNetcore				= false, // True: will create files inside wwwroot || False: will create files inside Content.
-			isProduction		= false, // True: will compress and add header to css and js files and optim images.
-			headerName			= 'Navidad Cinépolis ' + new Date().getFullYear() + ' ';
+			isProduction		= true, // True: will compress and add header to css and js files and optim images.
+			headerName			= 'Chávez Velasco Abogados ' + new Date().getFullYear() + ' ';
 
 // Sass Compiler
-sass.compiler		= require('node-sass'); 
+sass.compiler		= require('node-sass');
 
 // PATHS
 const PATHS = {
 	styles: {
-		src: 'Frontend/Preprocess/Sass',
+		src: 'Preprocess/Sass',
 	},
 	html: {
-		src: 'Frontend/Preprocess/Pug',
-		out: 'Frontend/Preprocess/Html'
+		src: 'Preprocess/Pug',
+		out: 'Preprocess/Html'
 	},
 	vendors: {
-		src: 'Frontend/Preprocess/Vendors',
+		src: 'Preprocess/Vendors',
 	},
 	outNetcore: 'wwwroot/',
-	outMvc: ''
+	outMvc: 'Content/'
 }
 
 // TASK´S //////////
@@ -69,7 +69,7 @@ function fileHeader(title) {
 		'/*!',
 			title + ' - ' + pkg.version,
 			'	Copyright © 2016 - ' + new Date().getFullYear(),
-			'	Desarrollado en IA Interactive',
+			'	Desarrollado en DiegoreDesign',
 		'*/\n'
 	].join('\n')
 }
@@ -183,7 +183,7 @@ gulp.task('default', () => {
 	gulp.watch(PATHS.html.src + '/**/*.pug', gulp.series('pug'))
 	gulp.watch(PATHS.styles.src + '/**/*.scss', gulp.series('sass'))
 	gulp.watch(PATHS.vendors.src + '/*.js', gulp.series('scripts'))
-	gulp.watch('Frontend/Preprocess/Html', gulp.series('prettifypages'))
+	gulp.watch('Preprocess/Html', gulp.series('prettifypages'))
 	gulp.watch('html').on('change', browserSync.reload)
 
 });
