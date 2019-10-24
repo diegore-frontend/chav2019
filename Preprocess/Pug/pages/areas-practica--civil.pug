@@ -1,0 +1,26 @@
+extend ../layout/_layout
+
+block content
+	article.ap-practica.ap-prtc#ap-practica
+		.ap-prtc-desc
+			nav.ap-prtc-nav
+				a.ap-btn-link(href="./areas-practica.html")
+					svg.icon
+						use(xlink:href="#left")
+
+					| Regresar
+
+			article.ap-prtc-detail
+				h3.ap-tttt Derecho Civil
+
+				p.ap-txt  Lorem ipsum dolor #[span.ap-txt--bold bold text], consectetur adipisicing elit. Inventore vitae incidunt sequi enim accusantium dolorem animi ex omnis cumque, voluptates laboriosam voluptatum nulla quae totam fugiat dolore tempore distinctio. Sunt?
+
+				ul.ap-prtc-detail-list
+					li.ap-prtc-detail-item Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					li.ap-prtc-detail-item Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					li.ap-prtc-detail-item Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					li.ap-prtc-detail-item Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+			figure.ap-prtc-justice
+				svg.icon
+					use(xlink:href="#justice")

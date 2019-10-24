@@ -1,0 +1,26 @@
+.ap {
+	// Button
+	&-btn {
+		background-color: $base;
+		font-weight: $tt;
+		color: $white;
+		display: block;
+		border-radius: .2em;
+		text-align: center;
+		padding: 0.7em;
+		box-shadow: 0em 0em 0.4em rgba(0,0,0,.8);
+	}
+		&--cstm {
+			position: relative;
+			color: $white;
+		}
+			&:before {
+				background-color: $base;
+				content: '';
+				position: absolute;
+			}
+		&--title {
+			color: $base;
+			font-weight: $tt-aTitle;
+		}
+}

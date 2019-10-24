@@ -1,0 +1,43 @@
+$topGrad: #FFF, rgba(255,255,255,.2);
+
+.ap {
+	&-prtc {
+		&-img {
+			height: 20em;
+			position: relative;
+		}
+		&-content {
+			@include gradient(to bottom, $topGrad);
+			margin-top: -3em;
+			position: relative;
+			z-index: 1;
+			padding: 1em;
+		}
+		&-item {
+			margin-bottom: .6em;
+
+			.ap-btn {
+				max-width: 20em;
+				margin: auto;
+			}
+
+			@include above(760px) {
+				margin-bottom: 1.6em;
+				width: 15em;
+				margin-left: 1.6em;
+			}
+		}
+
+		&-list {
+			@include above(760px) {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				max-width: 50em;
+				margin: auto;
+				justify-content: center;
+				padding: 2em 0;
+			}
+		}
+	}
+}

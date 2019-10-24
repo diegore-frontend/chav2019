@@ -1,0 +1,30 @@
+$tt: 800;// Principal title (slider)
+$tt-aTitle: 700;// Area titles
+$tt-regular: 400;// Area titles Inside
+$tt-thin: 300;// Thin wheight
+$ffamily: 'Open Sans', sans-serif;// Global font
+
+.ap {
+	// Titles
+	&-tt {
+		font-weight: $tt;
+		color: $white;
+	}
+	&-ttt {
+		font-weight: $tt-regular;
+		text-align: center;
+		font-size: 1.8em;
+		padding: .4em;
+
+		&--inside {
+			font-weight: $tt
+		}
+		&--link {
+			font-weight: $tt-aTitle;
+			color: $base;
+		}
+	}
+	&-txt {
+		font-weight: $tt-regular;
+	}
+}

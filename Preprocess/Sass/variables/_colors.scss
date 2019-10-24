@@ -1,1 +1,17 @@
-$red: #f00;
+$base: #0061fb;			// $base = Principal Blue
+$baseSec: #194946; 	// $baseSec = Secondary Blue
+
+$gray: #f2f2f2; 		// $gray = gray
+
+$orange: #e75400; 	// $orange = Principal Blue
+
+$white: #fff;
+
+$txt: #222;
+
+@mixin gradient($direction, $list) {
+	background: -webkit-linear-gradient($direction, $list);
+	background: -moz-linear-gradient($direction, $list);
+	background: -o-linear-gradient($direction, $list);
+	background: linear-gradient($direction, $list);
+}

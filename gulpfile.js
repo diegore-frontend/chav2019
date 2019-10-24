@@ -41,7 +41,7 @@ const gulp						= require('gulp'),
 			// Settings
 			filename				= 'master',
 			isNetcore				= false, // True: will create files inside wwwroot || False: will create files inside Content.
-			isProduction		= true, // True: will compress and add header to css and js files and optim images.
+			isProduction		= false, // True: will compress and add header to css and js files and optim images.
 			headerName			= 'Chávez Velasco Abogados ' + new Date().getFullYear() + ' ';
 
 // Sass Compiler
@@ -67,9 +67,8 @@ const PATHS = {
 function fileHeader(title) {
 	return [
 		'/*!',
-			title + ' - ' + pkg.version,
-			'	Copyright © 2016 - ' + new Date().getFullYear(),
-			'	Desarrollado en DiegoreDesign',
+			'	Copyright © - ' + new Date().getFullYear(),
+			'	Desarrollado para Chávez Velasco Abogados',
 		'*/\n'
 	].join('\n')
 }
@@ -125,8 +124,7 @@ gulp.task('scripts', () =>{
 gulp.task('pug', () => {
 	return gulp.src(PATHS.html.src + '/pages/*.pug')
 	.pipe(plumber())
-	.pipe(pug())
-	.pipe(concat('index.html'))
+	.pipe(pug({pretty:true}))
   .pipe(gulp.dest(PATHS.html.out))
 });
 

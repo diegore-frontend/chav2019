@@ -1,0 +1,22 @@
+body {
+	font-family: $ffamily;
+	font-size: 12px;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+	overflow-x: hidden;
+}
+
+html {
+	@media screen and (min-width: 480px) and (max-width: 896px) and (orientation: landscape) {
+		transform: rotate(-90deg);
+		transform-origin: left top;
+		width: 100vh;
+		overflow-x: hidden;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		height: 100vh;
+		min-height: 38em;
+	}
+}

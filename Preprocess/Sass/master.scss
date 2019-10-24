@@ -1,9 +1,21 @@
+// Variables
+@import 'node_modules/rupture-sass/rupture';
 @import "./variables/_colors";
 
-body {
-	font-size: 12px;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	position: relative;
-	overflow-x: hidden;
-}
+// Vendors
+@import "./components/_swiper";
+
+// Components
+@import "./components/_normalize";
+@import "./components/_text-styles";
+@import "./components/_body";
+@import "./components/_buttons";
+
+// Layout
+@import "./layout/_header";
+@import "./layout/_navigation";
+
+// Pages
+@import "./pages/_slider-home";
+@import "./pages/_home";
+@import "./pages/_areas-practica"

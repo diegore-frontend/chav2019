@@ -1,6 +1,21 @@
-extend ../layout/layout.pug
+extend ../layout/_layout
 
 block content
-	p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus non quia voluptatem voluptatibus incidunt nulla id animi vel distinctio laborum perspiciatis dolor sit, voluptates architecto, quas laudantium beatae. Reiciendis, ratione.
+	article.ap-slider-home
+		include ../partials/part.home-slider.pug
+		article.ap-slider-info
+			.ap-slider-flx
+				h1.ap-tt Cuanto más duro es el conflicto, más glorioso es el triunfo.
+					small.ap-tt--small Thomas Paine
 
-	p.alert Hola
+				nav.ap-slider-nav
+					a.ap-logo-link
+						svg.icon
+							use(xlink:href="#logo")
+
+					.ap-slider-nav-split
+						a.ap-intro-close.ap-txt-link(href="#") Entrar
+						a.ap-intro-close.ap-txt-link(href="#") Enter
+
+	section.ap-home-wrapp
+		include ../partials/part.areas-navigation.pug
