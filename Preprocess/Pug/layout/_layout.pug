@@ -3,13 +3,12 @@ html(lang="es-MX")
 	include ../partials/part.head.pug
 
 	body.ap.ap--is-loading
+		include ../partials/part.header.pug
+
 		main.ap-main
-			include ../partials/part.header.pug
-			section.ap-sect
-				block content
+			block content
 
-			include ../partials/part.footer.pug
-
+		include ../partials/part.footer.pug
 
 		include ../partials/part.svg.pug
 

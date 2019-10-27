@@ -5,6 +5,10 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 		&-img {
 			height: 20em;
 			position: relative;
+
+			@include above(760px) {
+				height: 30em;
+			}
 		}
 		&-content {
 			@include gradient(to bottom, $topGrad);
@@ -37,6 +41,87 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 				margin: auto;
 				justify-content: center;
 				padding: 2em 0;
+			}
+		}
+
+		// Description Pages
+		&-desc {
+			display: flex;
+			position: relative;
+			padding: 1em;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: flex-start;
+
+			.ap-prtc {
+				&-detail {
+					position: relative;
+					z-index: 2;
+				}
+				&-justice {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+
+					.icon {
+						fill: #e9e9e9;
+						font-size: 17em;
+						opacity: 1;
+						width: 2em;
+						height: 2em;
+						position: absolute;
+						left: 50%;
+						margin-left: -1.2em;
+						padding: 0;
+					}
+				}
+			}
+
+		}
+
+		&-detail {
+			.ap-tttt {
+				font-weight: $tt;
+				color: $txt;
+				font-size: 1.8em;
+				font-weight: 800;
+				margin-bottom: 0.4em;
+			}
+
+			.ap {
+				&-txt {
+					padding-bottom: 1em;
+
+					&--bold {
+						font-weight: 700;
+					}
+				}
+			}
+
+			&-list {
+				padding-left: 1em
+			}
+
+			&-item {
+				margin-bottom: .6em;
+				position: relative;
+
+				&:before {
+					content: '';
+					border: 1px solid $orange;
+					position: absolute;
+					width: 0.4em;
+					height: 0.4em;
+					left: -1.2em;
+					border-radius: 1.2em;
+					top: 50%;
+					margin-top: -1em;
+				}
+
+				&:last-child {
+					margin-bottom: 0
+				}
 			}
 		}
 	}

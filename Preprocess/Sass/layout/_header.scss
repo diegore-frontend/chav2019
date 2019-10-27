@@ -1,0 +1,15 @@
+.ap {
+	&-header {
+		background-color: $gray;
+		padding: 1em;
+
+		.ap-panel {
+			@include above(1000px) {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
+	}
+}

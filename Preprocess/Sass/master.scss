@@ -12,8 +12,10 @@
 @import "./components/_buttons";
 
 // Layout
+@import "./layout/_layout";
 @import "./layout/_header";
 @import "./layout/_navigation";
+@import "./layout/_footer";
 
 // Pages
 @import "./pages/_slider-home";

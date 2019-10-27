@@ -1,3 +1,17 @@
 .ap-footer {
 	position: relative;
+	padding: 0 1em;
+
+	.ap-panel {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.ap-brand {
+		max-width: 4em;
+		margin: 0;
+	}
 }
