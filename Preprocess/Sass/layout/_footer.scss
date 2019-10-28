@@ -1,6 +1,6 @@
 .ap-footer {
 	position: relative;
-	padding: 0 1em;
+	padding: 1em;
 
 	.ap-panel {
 		display: flex;
@@ -13,5 +13,10 @@
 	.ap-brand {
 		max-width: 4em;
 		margin: 0;
+		height: 1em;
+
+		@include above(760px) {
+			font-size: 4.4em;
+		}
 	}
 }

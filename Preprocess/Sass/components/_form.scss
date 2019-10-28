@@ -1,0 +1,36 @@
+.ap {
+	&-input {
+		margin-bottom: 1em;
+	}
+	&-label {
+		font-weight: $tt-aTitle;
+		display: block;
+		margin-bottom: .6em;
+	}
+}
+
+
+// Input types
+.ap-input {
+	&-txt {
+		border: 1px solid transparent;
+		width: 100%;
+		transition: .20s linear;
+		padding: .6em;
+
+		&-area {
+			border: 1px solid transparent;
+			width: 100%;
+			transition: .20s linear;
+			padding: .6em;
+			min-height: 160px;
+		}
+	}
+
+	&-nav {
+		.ap-btn {
+			border: 0;
+			width: 100%
+		}
+	}
+}

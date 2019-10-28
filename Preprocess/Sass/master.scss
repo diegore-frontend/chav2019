@@ -9,6 +9,7 @@
 @import "./components/_normalize";
 @import "./components/_text-styles";
 @import "./components/_body";
+@import "./components/_form";
 @import "./components/_buttons";
 
 // Layout
@@ -20,4 +21,5 @@
 // Pages
 @import "./pages/_slider-home";
 @import "./pages/_home";
-@import "./pages/_areas-practica"
+@import "./pages/_areas-practica";
+@import "./pages/_contact-form"

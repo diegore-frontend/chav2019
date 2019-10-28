@@ -1,0 +1,57 @@
+.ap {
+	&-contact {
+		background-color: $gray;
+		padding: 1em
+	}
+	&-cntc {
+		&-flx {
+			display: flex;
+			flex-direction: column;
+
+			@include above(750px) {
+				flex-direction: row;
+				width: 54em;
+				margin: 0 auto;
+				padding: 0 1em;
+			}
+		}
+
+		&-info {
+			margin-bottom: 1em;
+
+			@include above(750px) {
+				width: 25em;
+				padding: 0 2em;
+				margin-bottom: 0;
+			}
+
+			&-sect {
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				margin-bottom: 1em
+			}
+		}
+
+		// Layout
+		&-icon {
+			width: 2em;
+
+			.icon {
+				fill: $orange;
+				width: 1em;
+				height: 1em;
+				margin: 0 auto;
+			}
+		}
+
+		&-data {
+			width: calc(100% - 3em)
+		}
+
+		// Form
+		&-form {
+			width: 100%;
+		}
+	}
+}

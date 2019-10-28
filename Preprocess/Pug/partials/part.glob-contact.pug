@@ -1,0 +1,53 @@
+article.ap-contact
+	h2.ap-ttt Contáctanos
+
+	div.ap-cntc-flx
+		div.ap-cntc-info
+			div.ap-cntc-info-sect
+				div.ap-cntc-icon
+					svg.icon
+						use(xlink:href="#map-pin")
+
+				div.ap-cntc-data
+					p.ap-txt #[span.ap-txt--bold Paseo Tulum, Manzana 19 Lote 8 Edificio Bugambilias, Oficina 25, Playacar Fase II. CP. 77710.]
+
+					p.ap-txt Playa del Carmen, Quintana Roo.
+
+					a.ap-txt-link(href="#") Ver ubicación
+
+			//- Contact Mail
+			div.ap-cntc-info-sect
+				div.ap-cntc-icon
+					svg.icon
+						use(xlink:href="#envelope")
+
+				div.ap-cntc-data
+					a.ap-txt-link(href="mailto:chavezvelascoabogados@gmail.com") chavezvelascoabogados@gmail.com
+
+			//- Contact Phones
+			div.ap-cntc-info-sect
+				div.ap-cntc-icon
+					svg.icon
+						use(xlink:href="#phone")
+
+				div.ap-cntc-data
+					p.ap-txt--bold +52 (984) 150 20 25
+					p.ap-txt--bold +52 (443) 432 16 94
+					p.ap-txt--bold +52 (443) 120 38 89
+
+		div.ap-cntc-form
+			form.ap-cntc-input-form#ap-form
+				div.ap-input
+					label.ap-label Nombre Completo
+					input#ap-form-name.ap-input-txt(type='text', placeholder='Juan Pérez ...' name='name')
+
+				div.ap-input
+					label.ap-label Email
+					input#ap-form-mail.ap-input-txt(type='email', placeholder='juan19@mimail.com' name='mail')
+
+				div.ap-input
+					label.ap-label Asunto
+					textarea#ap-form-text.ap-input-txt-area(placeholder='...' name='message')
+
+				nav.ap-input-nav
+					button.ap-btn Enviar

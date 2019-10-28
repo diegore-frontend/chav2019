@@ -26,5 +26,15 @@ $ffamily: 'Open Sans', sans-serif;// Global font
 	}
 	&-txt {
 		font-weight: $tt-regular;
+
+		&--bold {
+			font-weight: $tt-aTitle;
+		}
+
+		&-link {
+			color: $base;
+			text-decoration: underline;
+			font-weight: $tt-aTitle;
+		}
 	}
 }
