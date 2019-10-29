@@ -1,0 +1,36 @@
+extend ../layout/_layout
+
+block content
+	article.ap-insights#ap-insights
+		.ap-tabs
+			ul.ap-tabs-nav
+				li.ap-tabs-item.ap-tabs-item--current
+					a.ap-tabs-link(href="#ap-tab-01") BACKLINKS
+
+				li.ap-tabs-item
+					a.ap-tabs-link(href="#ap-tab-02") SITIOS OFICIALES
+
+				li.ap-tabs-item
+					a.ap-tabs-link(href="#ap-tab-03") ACTUALIDAD
+
+			.ap-tabs-content#ap-tabs-content
+				.ap-tabs-box
+					#ap-tab-01.ap-tab-content.ap-tab--active
+						.ap-tab-flx
+							include ../partials/part.post.pug
+							include ../partials/part.post.pug
+							include ../partials/part.post.pug
+
+					#ap-tab-02.ap-tab-content
+						.ap-tab-flx
+							include ../partials/part.post.pug
+							include ../partials/part.post.pug
+							include ../partials/part.post.pug
+							include ../partials/part.post.pug
+							include ../partials/part.post.pug
+
+					#ap-tab-03.ap-tab-content
+						.ap-tab-flx
+							include ../partials/part.post.pug
+							include ../partials/part.post.pug
+							include ../partials/part.post.pug

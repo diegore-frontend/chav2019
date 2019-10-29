@@ -1,0 +1,42 @@
+.ap {
+	&-tabs {
+		position: relative;
+		z-index: 5;
+		margin-top: 2em;
+
+		&-box {
+			padding: 1em 0;
+		}
+		&-item {
+			display: inline-block;
+
+			&--current {
+				.ap-tabs-link {
+					color: $base;
+					opacity: 1;
+					border-color: $base;
+				}
+			}
+		}
+		&-link {
+			color: rgba(0,0,0,.6);
+			font-size: 1.4em;
+			font-weight: 900;
+			transition: color .30s ease-in;
+			padding: 0 0.6em 0.4em;
+			border-bottom: 3px solid rgba(0,0,0,.2);
+			display: block;
+		}
+		&-content {
+			position: relative;
+		}
+	}
+	&-tab {
+		&-content {
+			display: none;
+		}
+		&--active {
+			display: block;
+		}
+	}
+}

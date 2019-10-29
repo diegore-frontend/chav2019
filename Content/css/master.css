@@ -772,6 +772,35 @@ body {
   color: #0061fb;
   font-weight: 700; }
 
+.ap-tabs {
+  position: relative;
+  z-index: 5;
+  margin-top: 2em; }
+  .ap-tabs-box {
+    padding: 1em 0; }
+  .ap-tabs-item {
+    display: inline-block; }
+    .ap-tabs-item--current .ap-tabs-link {
+      color: #0061fb;
+      opacity: 1;
+      border-color: #0061fb; }
+  .ap-tabs-link {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.4em;
+    font-weight: 900;
+    transition: color .30s ease-in;
+    padding: 0 0.6em 0.4em;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    display: block; }
+  .ap-tabs-content {
+    position: relative; }
+
+.ap-tab-content {
+  display: none; }
+
+.ap-tab--active {
+  display: block; }
+
 .ap-brand {
   width: 100%;
   max-width: 8em;
