@@ -10,6 +10,19 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 			min-height: calc(80vh - 1em);
 		}
 
+		@include above(1000px) {
+			min-height: calc(94vh - 1em);
+		}
+
+		.ap-ttt {
+			margin-bottom: 0.5em;
+
+			@include above(760px) {
+				margin-bottom: 0;
+				padding: 0.4em 0;
+			}
+		}
+
 		&-img {
 			height: 20em;
 			position: relative;
@@ -26,7 +39,7 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 			padding: 1em;
 		}
 		&-item {
-			margin-bottom: .6em;
+			margin-bottom: 1.2em;
 
 			.ap-btn {
 				max-width: 20em;
@@ -35,9 +48,15 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 
 			@include above(760px) {
 				margin-bottom: 1.6em;
-				width: 15em;
+				width: 22em;
 				margin-left: 1.6em;
 			}
+			@include above(1000px) {
+				width: 19.6em
+			}
+
+
+
 		}
 
 		&-list {
@@ -49,6 +68,9 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 				margin: auto;
 				justify-content: center;
 				padding: 2em 0;
+			}
+			@include above(1000px) {
+				max-width: 64em;
 			}
 		}
 

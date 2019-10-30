@@ -1060,6 +1060,15 @@ body {
   @media only screen and (min-width: 760px) {
     .ap-prtc {
       min-height: calc(80vh - 1em); } }
+  @media only screen and (min-width: 1000px) {
+    .ap-prtc {
+      min-height: calc(94vh - 1em); } }
+  .ap-prtc .ap-ttt {
+    margin-bottom: 0.5em; }
+    @media only screen and (min-width: 760px) {
+      .ap-prtc .ap-ttt {
+        margin-bottom: 0;
+        padding: 0.4em 0; } }
   .ap-prtc-img {
     height: 20em;
     position: relative; }
@@ -1073,15 +1082,18 @@ body {
     z-index: 1;
     padding: 1em; }
   .ap-prtc-item {
-    margin-bottom: .6em; }
+    margin-bottom: 1.2em; }
     .ap-prtc-item .ap-btn {
       max-width: 20em;
       margin: auto; }
     @media only screen and (min-width: 760px) {
       .ap-prtc-item {
         margin-bottom: 1.6em;
-        width: 15em;
+        width: 22em;
         margin-left: 1.6em; } }
+    @media only screen and (min-width: 1000px) {
+      .ap-prtc-item {
+        width: 19.6em; } }
   @media only screen and (min-width: 760px) {
     .ap-prtc-list {
       display: flex;
@@ -1091,6 +1103,9 @@ body {
       margin: auto;
       justify-content: center;
       padding: 2em 0; } }
+  @media only screen and (min-width: 1000px) {
+    .ap-prtc-list {
+      max-width: 64em; } }
   @media only screen and (min-width: 760px) {
     .ap-prtc-nav {
       padding-top: 0.4em;
