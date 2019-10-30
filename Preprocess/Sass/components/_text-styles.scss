@@ -13,8 +13,13 @@ $ffamily: 'Open Sans', sans-serif;// Global font
 	&-ttt {
 		font-weight: $tt-regular;
 		text-align: center;
-		font-size: 1.8em;
+		font-size: 2.4em;
 		padding: .4em;
+
+		@include above(1000px) {
+			font-size: 3.6em;
+			padding: 0.8em 0;
+		}
 
 		&--inside {
 			font-weight: $tt

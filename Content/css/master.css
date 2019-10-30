@@ -664,8 +664,12 @@ option {
 .ap-ttt {
   font-weight: 400;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 2.4em;
   padding: .4em; }
+  @media only screen and (min-width: 1000px) {
+    .ap-ttt {
+      font-size: 3.6em;
+      padding: 0.8em 0; } }
   .ap-ttt--inside {
     font-weight: 800; }
   .ap-ttt--link {
@@ -747,6 +751,10 @@ body {
       fill: #FFF; }
   .ap-btn--twitter {
     padding: 0.3em; }
+  .ap-btn--facebook {
+    background: none; }
+    .ap-btn--facebook .icon {
+      fill: #0061fb; }
   .ap-btn-link {
     display: inline-flex;
     width: 6em;
@@ -805,7 +813,8 @@ body {
   width: 100%;
   max-width: 8em;
   font-size: 2.5em;
-  margin: 0 auto 0.4em; }
+  margin: 0 auto 0;
+  position: relative; }
   @media only screen and (min-width: 1000px) {
     .ap-brand {
       margin: 0; } }
@@ -840,13 +849,25 @@ body {
 
 .ap-header {
   background-color: #f2f2f2;
-  padding: 1em; }
+  padding: 1em 0 0; }
   @media only screen and (min-width: 1000px) {
     .ap-header .ap-panel {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between; } }
+  .ap-header .ap-brand {
+    position: relative; }
+    @media only screen and (max-width: 760px) {
+      .ap-header .ap-brand:before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        bottom: -0.1em;
+        background-color: #000;
+        opacity: .1;
+        right: -0.6em;
+        left: -0.6em; } }
 
 .ap-navigation {
   white-space: nowrap;
@@ -1143,7 +1164,7 @@ body {
 
 .ap-contact {
   background-color: #f2f2f2;
-  padding: 1em; }
+  padding: 0 1em 4em; }
 
 .ap-cntc-flx {
   display: flex;
@@ -1169,7 +1190,9 @@ body {
     margin-bottom: 1em; }
 
 .ap-cntc-icon {
-  width: 2em; }
+  width: 2em;
+  text-align: center;
+  font-size: 2em; }
   .ap-cntc-icon .icon {
     fill: #e75400;
     width: 1em;

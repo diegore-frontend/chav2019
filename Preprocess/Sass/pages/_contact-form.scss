@@ -1,7 +1,7 @@
 .ap {
 	&-contact {
 		background-color: $gray;
-		padding: 1em
+		padding: 0 1em 4em
 	}
 	&-cntc {
 		&-flx {
@@ -36,6 +36,8 @@
 		// Layout
 		&-icon {
 			width: 2em;
+			text-align: center;
+			font-size: 2em;
 
 			.icon {
 				fill: $orange;

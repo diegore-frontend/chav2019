@@ -1,7 +1,7 @@
 .ap {
 	&-header {
 		background-color: $gray;
-		padding: 1em;
+		padding: 1em 0 0;
 
 		.ap-panel {
 			@include above(1000px) {
@@ -9,6 +9,23 @@
 				flex-direction: row;
 				align-items: center;
 				justify-content: space-between;
+			}
+		}
+
+		.ap-brand {
+			position: relative;
+
+			@include below(760px) {
+				&:before {
+					content: '';
+					position: absolute;
+					height: 1px;
+					bottom: -0.1em;
+					background-color: #000;
+					opacity: .1;
+					right: -0.6em;
+					left: -0.6em;
+				}
 			}
 		}
 	}
