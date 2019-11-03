@@ -1,0 +1,94 @@
+.ap {
+	&-insights {
+		.ap-tabs {
+			&-nav {
+				background-color: $base;
+				padding: 1em 0;
+				text-align: center;
+			}
+
+			&-link {
+				color: #4da9ff;
+				border: 0;
+				font-weight: 400;
+				font-size: 1.2em;
+			}
+			&-content {
+				padding: 1em
+			}
+
+			&-item {
+				&--current {
+					.ap-tabs-link {
+						font-weight: 700;
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+
+	&-tab {
+		&-flx {
+			display: flex;
+			flex-wrap: wrap;
+
+
+			@include above(1000px) {
+				max-width: 80em;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	// Post
+	&-post {
+		width: 48%;
+		padding: 1em;
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 5em;
+			height: .1em;
+			background-color: $orange;
+			bottom: 0;
+		}
+
+		@include above(760px) {
+			width:32%
+		}
+
+		&-info {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&-img {
+			img {
+				width: 100%
+			}
+		}
+
+		.ap {
+			&-ttt--link {
+				margin-top: .6em
+			}
+			&-txt {
+				margin-top: .6em;
+				color: $txt;
+
+				&--date {
+					color: #c3c3c3;
+				}
+				&--link {
+					color: $base;
+					text-transform: uppercase;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

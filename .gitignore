@@ -285,3 +285,4 @@ $RECYCLE.BIN/
 *.lnk
  
 # End of https://www.gitignore.io/api/node,linux,macos,windows,webstorm,sublimetext,visualstudiocode
+Content/media/video.mp4

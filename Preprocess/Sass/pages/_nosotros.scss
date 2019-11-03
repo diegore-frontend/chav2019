@@ -1,0 +1,108 @@
+$blackGrad: rgba(0,0,0, 0), rgba(0,0,0,1);
+
+.ap {
+	&-us {
+		@include above(760px) {
+			height: calc(100vh - 10em);
+			position: relative;
+		}
+
+		@include above(1000px) {
+			height: calc(100vh - 5.2em);
+		}
+
+
+
+		&-img {
+			height: 18em;
+
+			@include above(760px) {
+				height: 80%;
+			}
+
+			@include above(1000px) {
+				height: 100%;
+			}
+
+			img {
+				width: 100%
+			}
+		}
+
+		&-info {
+
+			&:before {
+				@include above(1000px) {
+					@include gradient(to bottom, $blackGrad);
+					content: '';
+					position: absolute;
+					top: -18em;
+					right: 0;
+					left: 0;
+					bottom: 0;
+				}
+
+			}
+
+			@include above(1000px) {
+				position: absolute;
+				z-index: 1;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+
+			&-box {
+				position: relative;
+
+				@include below(1000px) {
+					max-width: 90%;
+					margin: 0 auto;
+				}
+
+				@include above(1000px) {
+					max-width: 65%
+				}
+
+				.ap-txt {
+					padding-bottom: .6em;
+					font-size: 1.4em
+				}
+
+				&:before {
+					background: $orange;
+					content: '';
+					position: absolute;
+					width: 8em;
+					height: 4px;
+					bottom: -4px;
+				}
+			}
+
+			.ap-ttt, .ap-txt {
+				color: #FFF;
+			}
+
+			.ap-ttt {
+				@include above(1000px) {
+					text-align: left;
+					margin-bottom: 0;
+					padding: .2em 0
+				}
+			}
+		}
+	}
+
+	&-info {
+		&-panel {
+			@include above(1000px) {
+				max-width: 80em;
+				margin: auto;
+				padding: 2em 0;
+				text-align: left;
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
+}

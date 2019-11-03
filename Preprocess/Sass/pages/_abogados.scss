@@ -1,0 +1,283 @@
+.ap {
+	&-lawyers {
+		background-color: $base;
+
+		&-panel {
+			@include above(760px) {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				height: 32em;
+			}
+			@include above(1000px) {
+				height: 40em;
+				margin: 0 auto;
+			}
+
+			@include above(1600px) {
+				height: 54em;
+			}
+		}
+	}
+
+	&-lawyer {
+		position: relative;
+		overflow: hidden;
+
+		@include above(760px) {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+		}
+
+		&-page {
+			overflow: hidden;
+
+			@include above(1600px) {
+				height: calc(100vh - 18em);
+			}
+
+
+			.ap-lawyer-square {
+				height: 26.8em;
+
+				@include above(760px) {
+					width: 50%;
+				}
+
+				@include above(1000px) {
+					width: 50%;
+					height: 100%;
+				}
+			}
+
+			.ap-lawyer {
+				@include above(760px) {
+					height: 32em;
+				}
+
+				@include above(1000px) {
+					height: 40em;
+				}
+
+				@include above(1600px) {
+					height: 100%;
+				}
+			}
+
+			&--mauricio {
+				.ap-lawyer {
+					flex-direction: row-reverse;
+				}
+
+				.ap-lawyer-info {
+					align-items: flex-end;
+				}
+			}
+		}
+
+		&-detach {
+			@include above(760px) {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				left: 0;
+				top: 0;
+				background-color: #FFF;
+				opacity: 0;
+			}
+		}
+
+		.ap-tt {
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 3em;
+
+			&--small {
+				display: block;
+				font-weight: 400;
+				font-size: .6em;
+			}
+		}
+
+		&-bg {
+			background: url('../img/pattern.png') rgba($base, .2);
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 1;
+		}
+
+		&-img {
+			width: 100%;
+			position: relative;
+
+			img {
+				width: 100%
+			}
+		}
+
+		// lawyer style
+		&-square {
+			position: relative;
+
+			@include above(760px) {
+				width: 100%
+			}
+		}
+		&-overlay {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+			padding-bottom: 2.8em
+		}
+
+		&-info {
+			overflow: hidden;
+
+			@include above(760px) {
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			&-area {
+				padding: 1em;
+				height: 100%;
+
+				@include above(760px) {
+					padding: 1em;
+					height: 100%;
+					width: 44em;
+				}
+			}
+
+			.ap-scroll {
+				height: calc(100% - 2.8em);
+				padding: 0 1.2em 0 0;
+			}
+		}
+
+		&-desc {
+			margin-bottom: 1em;
+
+			.ap-txt {
+				padding-bottom: 1em;
+
+				&--bold {
+					padding-bottom: .6em
+				}
+			}
+		}
+
+		&-nav {
+			margin-bottom: 1em;
+		}
+
+		// Data
+		&-photo {
+			width: 10em;
+			height: 10em;
+			border-radius: 14em;
+			overflow: hidden;
+			margin: 0 auto 1.6em;
+
+			img {
+				width: 100%
+			}
+		}
+
+		&-data {
+			text-align: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			bottom: 0;
+			flex-direction: column;
+			justify-content: center;
+			font-size: .85em;
+
+			@include above(1000px) {
+				font-size: 1.12em;
+			}
+
+			.icon {
+				width: 100%;
+				height: 100%;
+				fill: rgba(#43a4ff, .9);
+			}
+
+			&-icon {
+				width: 3em;
+				height: 3em;
+				margin: 0 auto .6em;
+			}
+
+			.ap-txt-link {
+				color: #FFF;
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			.ap-txt--bold {
+				color: #FFF;
+				a {
+					color: #FFF;
+					text-decoration: underline;
+				}
+			}
+
+			&-info {
+				margin-bottom: 1em;
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+
+		&-button {
+			text-align: center;
+			position: relative;
+			z-index: 2;
+
+			@include above(1200px) {
+				font-size: 1.6em;
+			}
+
+			.ap-btn-outline {
+				border: 1px solid #FFF;
+				color: #FFF;
+				display: block;
+				margin-top: 1.4em;
+				padding: 0.6em;
+				border-radius: 0.2em;
+				transition: .30s linear;
+
+				&:hover {
+					@include above(1000px) {
+						background-color: #FFF;
+						color: $base;
+					}
+				}
+			}
+		}
+	}
+}

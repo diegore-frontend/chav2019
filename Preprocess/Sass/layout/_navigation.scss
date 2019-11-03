@@ -1,15 +1,26 @@
 .ap {
-	&-navigation {
-		white-space: nowrap; /* [1] */
-		overflow-x: auto; /* [2] */
-		-webkit-overflow-scrolling: touch; /* [3] */
-		-ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
-
-		&::-webkit-scrollbar {
-			display: none
-		}
-	}
 	&-nav {
+		&-cont {
+			white-space: nowrap; /* [1] */
+			overflow-x: auto; /* [2] */
+			-webkit-overflow-scrolling: touch; /* [3] */
+			-ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+
+			&::-webkit-scrollbar {
+				display: none
+			}
+		}
+		&-list {
+			display: inline-block;
+
+			&--current {
+				.ap-nav-item {
+					color: $base;
+					font-weight: $tt-aTitle;
+					border-color: $base;
+				}
+			}
+		}
 		&-item {
 			color: $txt;
 			border-bottom: 3px solid transparent;
@@ -18,13 +29,6 @@
 			margin-right: .6em;
 			display: inline-block;
 			text-transform: uppercase;
-
-
-			&--selected {
-				 color: $base;
-				 font-weight: $tt-aTitle;
-				 border-color: $base;
-			}
 		}
 	}
 }

@@ -3,21 +3,32 @@ div.swiper-container.ap-gallery-slide
 	div.swiper-wrapper#ap-gallery-slider
 		.swiper-slide
 			figure.ap-gal-img
-				img(src="/Content/img/home-slider/img-slider-01.jpg", alt="Slide 01")
+				img.ap-gal-src(src="/Content/img/gallery/img-01.jpg", alt="Slide 01")
 
 		.swiper-slide
 			figure.ap-gal-img
-				img(src="/Content/img/home-slider/img-slider-02.jpg", alt="Slide 02")
+				img.ap-gal-src(src="/Content/img/gallery/img-02.jpg", alt="Slide 02")
 		.swiper-slide
 			figure.ap-gal-img
-				img(src="/Content/img/home-slider/img-slider-03.jpg", alt="Slide 03")
+				img.ap-gal-src(src="/Content/img/gallery/img-03.jpg", alt="Slide 03")
+		.swiper-slide
+			figure.ap-gal-img
+				img.ap-gal-src(src="/Content/img/gallery/img-04.jpg", alt="Slide 04")
 
 	.swiper-pagination
 
 	nav.ap-gal-nav
-		a.ap-gal-link.ap-gal-mod(href="#") VER VIDEO
+		a.ap-gal-link.ap-gal-mod(href="#ap-gal-overlay")
+			| VER VIDEO
 
-div.ap-gal-overlay
+			svg.icon
+				use(xlink:href="#play")
+
+div.ap-gal-overlay#ap-gal-overlay
+	a.ap-gal-close(href="#")
+		svg.icon
+			use(xlink:href="#close")
+
 	div.ap-gal-flx
 		.ap-video
-			video.ap-video-src(src="/Content/media/video.mp4")
+			video.ap-video-src(src="../Content/media/video.mp4", controls="")
