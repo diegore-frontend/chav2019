@@ -41,7 +41,7 @@ const gulp						= require('gulp'),
 			// Settings
 			filename				= 'master',
 			isNetcore				= false, // True: will create files inside wwwroot || False: will create files inside Content.
-			isProduction		= false, // True: will compress and add header to css and js files and optim images.
+			isProduction		= true, // True: will compress and add header to css and js files and optim images.
 			headerName			= 'Chávez Velasco Abogados ' + new Date().getFullYear() + ' ';
 
 // Sass Compiler
