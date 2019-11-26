@@ -4,6 +4,7 @@ var $wW = $(window).width(),
 		$infoHeight = "",
 		$infoSize = "",
 		$tl ="",
+		$videoUrl = $('.ap-video-src').attr('src'),
 		$ww = $(window).width(),
 		p,
 		$mCloseBtn = $('.ap-mod-close');
@@ -15,20 +16,23 @@ function sliderHome() {
 				delay: 5000,
 			}
 	});
-
-	$('.ap-slide-home-img').imagefill();
 }
 
 function imageFill() {
+
+	if ($('.ap-slide-home-img').length) {
+		$('.ap-slide-home-img').imagefill();
+	}
+
 	if ($('.ap-us').length) {
 		$('.ap-us-img').imagefill();
 	}
 
-	if ($('.ap-prtc-img').length) {
-		$('.ap-prtc-img').imagefill();
-	}
+	// if ($('.ap-prtc-img').length) {
+	// 	$('.ap-prtc-img').imagefill();
+	// }
 	if ($('.ap-gal-img').length) {
-		$('.ap-gal-img').imagefill({runOnce:true});
+		$('.ap-gal-img').imagefill({});
 	}
 }
 
@@ -70,6 +74,10 @@ function sliderGallery() {
 			});
 		});
 
+		if ($videoUrl === "") {
+		} else {
+			$('.ap-gal-link').fadeIn();
+		}
 	}
 }
 
@@ -125,7 +133,11 @@ function urlCntrol() {
 	var $page = jQuery.url.attr("file");
 
 	if(!$page) {
-		$page = 'index.html';
+		$page = 'areas-practica.html';
+	} else if($('.ap-practica-index').length) {
+		$page = 'areas-practica.html';
+	} else if($('.ap-lawyer-page').length) {
+		$page = 'abogados.html';
 	}
 	$('.ap-nav-cont .ap-nav-list .ap-nav-item').each(function(){
 		var	$href = this.href.substring(this.href.lastIndexOf('/') + 1);
@@ -143,7 +155,9 @@ function enter() {
 		var $la = $(this),
 				$elm = $la.closest('.ap-slider-home');
 
-		$elm.fadeOut();
+		$elm.fadeOut("1", function(){
+			$('body').removeClass("ap-home-wrapp--init")
+		});
 	});
 }
 
@@ -189,15 +203,61 @@ function infoHeight() {
 	}
 }
 
-$(function(){
+function init() {
 	urlCntrol();
-	infoHeight();
-	imageFill();
+}
+
+function loaded() {
+	$(".ap").imagesLoaded({ background: true }, function() {
+		$(".ap-modal--loading").fadeOut("1", function() {
+			$(this)
+				.removeClass("ap-modal--is-visible")
+				.removeAttr("style");
+
+			if ($(".ap-slider-home").length) {
+				$("body")
+					.removeClass("ap--is-loading")
+					.addClass("ap--is-ready");
+			} else {
+				$("body")
+					.removeClass("ap--is-loading ap-home-wrapp--init")
+					.addClass("ap--is-ready");
+			}
+
+
+			init();
+		});
+	});
+}
+
+function hashur() {
+	var $head = $('.ap-header').height();
+
+	$(".ap-nav-item--to-link").click(function(e) {
+		e.preventDefault();
+
+		$("html, body").animate(
+			{
+				scrollTop: $($(this).attr("href")).offset().top - $head+'px'
+			},
+			1000
+		);
+		return false;
+	});
+}
+
+
+$(function(){
+	loaded();
+	enter();
+	hashur()
 	sliderHome();
 	sliderGallery();
+	infoHeight();
+	imageFill();
 	modalBox();
 	tabs();
-	enter();
+
 
 	if ($(".ap-scroll").length) {
 		$(".ap-scroll").perfectScrollbar();

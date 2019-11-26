@@ -29,3 +29,32 @@
 @import "./pages/_abogados";
 @import "./pages/_gallery";
 @import "./pages/_destacados";
+
+// Loading effects
+.ap {
+	&--is-loading {
+		.ap {
+			&-main, &-header {
+				opacity: 0;
+				transition: 30s linear;
+			}
+		}
+	}
+	&--is-ready {
+		.ap {
+			&-header {
+				opacity: 1;
+			}
+			&-main {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.ap-main, .ap-header {
+	@include above(1920px) {
+		max-width: 1680px;
+		margin: 0 auto;
+	}
+}

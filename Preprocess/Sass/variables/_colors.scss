@@ -9,6 +9,8 @@ $white: #fff;
 
 $txt: #222;
 
+$btnGrad: rgba(0,0,0,.0), rgba(0,0,0,1);
+
 @mixin gradient($direction, $list) {
 	background: -webkit-linear-gradient($direction, $list);
 	background: -moz-linear-gradient($direction, $list);

@@ -2,6 +2,8 @@
 	&-header {
 		background-color: $gray;
 		padding: 1em 0 0;
+		transition: .30s ease-in;
+		opacity: 0;
 
 		.ap-panel {
 			@include above(1000px) {
