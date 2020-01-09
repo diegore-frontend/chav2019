@@ -53,8 +53,9 @@
 }
 
 .ap-main, .ap-header {
-	@include above(1920px) {
-		max-width: 1680px;
+	@include above(1800px) {
+		max-width: 1920px;
 		margin: 0 auto;
+		position: relative;
 	}
 }

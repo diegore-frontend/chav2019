@@ -2,6 +2,10 @@
 	position: relative;
 	padding: 1em;
 
+	@include above(1200px) {
+		padding: 30px 1em;
+	}
+
 	.ap-panel {
 		display: flex;
 		flex-direction: row;
@@ -17,6 +21,21 @@
 
 		@include above(760px) {
 			font-size: 4.4em;
+		}
+	}
+
+	.ap-social {
+		@include above(1200px) {
+			font-size: 15px;
+		}
+
+		.ap-btn-social {
+			&:first-child {
+
+				@include above(1200px) {
+					margin-right: 26px
+				}
+			}
 		}
 	}
 }

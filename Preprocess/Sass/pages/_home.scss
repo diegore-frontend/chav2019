@@ -1,8 +1,22 @@
 .ap-home-wrapp--init {
-	overflow: hidden;
+	@include below(1800px) {
+		overflow: hidden;
+	}
 	.ap {
 		&-home-wrapp, &-header, &-contact {
 			opacity: 0;
 		}
+
+		&-contact {
+			@include above(1800px) {
+				opacity: 1;
+			}
+		}
 	}
+
+	// .ap-home-wrapp--init {
+	// 	@include above(1800px) {
+	// 		display: none;
+	// 	}
+	// }
 }

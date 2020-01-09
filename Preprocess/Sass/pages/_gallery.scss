@@ -55,7 +55,11 @@
 			}
 			&--04 {
 				background-image: url('../img/gallery/img-04.jpg');
-				background-position: bottom;
+				background-position: top;
+			}
+			&--05 {
+				background-image: url('../img/gallery/img-05.jpg');
+				background-position: top;
 			}
 		}
 		&-nav {
@@ -97,17 +101,17 @@
 			max-width: 1366px;
 			margin: auto;
 		}
-		@include above(1920px) {
-				height: 720px;
-				max-width: 1466px;
-			}
+		@include above(1100px) {
+			height: 596px;
+			max-width: 1380px;
+		}
 
 		&-slide {
 			@include above(1000px) {
 				height: 680px;
 			}
-			@include above(1920px) {
-				height: 720px;
+			@include above(1100px) {
+				height: 596px;
 
 			}
 			&:before {
@@ -125,6 +129,12 @@
 				&-bullet {
 					background: transparent;
 					border: 2px solid #FFF;
+
+					@include above(1100px) {
+						margin: 0 8px;
+						width: 12px;
+						height: 12px;
+					}
 				}
 			}
 		}

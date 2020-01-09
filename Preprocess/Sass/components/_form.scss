@@ -18,19 +18,34 @@
 		transition: .20s linear;
 		padding: .6em;
 
+		@include above(1200px) {
+			padding: 12px;
+		}
+
 		&-area {
 			border: 1px solid transparent;
 			width: 100%;
 			transition: .20s linear;
 			padding: .6em;
 			min-height: 160px;
+
+			@include above(1200px) {
+				min-height: 134px;
+			}
 		}
 	}
 
 	&-nav {
 		.ap-btn {
 			border: 0;
-			width: 100%
+			width: 100%;
+
+			@include above(1200px) {
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: 22px;
+				padding: 12px 0;
+			}
 		}
 	}
 }

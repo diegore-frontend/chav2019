@@ -5,6 +5,19 @@
 		transition: .30s ease-in;
 		opacity: 0;
 
+		@include above(1200px) {
+			padding: 1.4em 0 0;
+		}
+		@include above(1800px) {
+			display: none;
+		}
+
+		&--visible {
+			@include above(1800px) {
+				display: block;
+			}
+		}
+
 		.ap-panel {
 			@include above(1000px) {
 				display: flex;
@@ -14,8 +27,13 @@
 			}
 		}
 
+
 		.ap-brand {
 			position: relative;
+
+			@include above(1200px) {
+				max-width: 7.6em
+			}
 
 			@include below(760px) {
 				&:before {
