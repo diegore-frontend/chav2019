@@ -1,18 +1,39 @@
-$topGrad: #FFF, rgba(255,255,255,.2);
+$topGrad: #fff, rgba(255, 255, 255, 0.2);
 
+// body {
+// 	&:after {
+// 		background: url(../img/06.2-destacados-sitios-oficiales.jpg) no-repeat;
+// 		position: absolute;
+// 		content: "";
+// 		width: 100%;
+// 		height: 1800px;
+// 		top: 0;
+// 		opacity: 0.8;
+// 		background-position: center top;
+// 		background-size: 1380px auto;
+// 		pointer-events: none;
+// 		cursor: none;
+// 	}
+// }
 .ap {
+	&-practica-index {
+		// @include above(760px) {
+		// 	min-height: 688px;
+		// 	max-width: 1100px;
+		// 	margin: 0 auto;
+		// }
+	}
 	&-prtc {
 		position: relative;
 		overflow: hidden;
 
+		// @include above(760px) {
+		// 	min-height: calc(80vh - 1em);
+		// }
 
-		@include above(760px) {
-			min-height: calc(80vh - 1em);
-		}
-
-		@include above(1000px) {
-			min-height: calc(94vh - 1em);
-		}
+		// @include above(1000px) {
+		// 	min-height: 688px
+		// }
 
 		.ap-ttt {
 			margin-bottom: 0.5em;
@@ -24,19 +45,65 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 		}
 
 		&-img {
+			background-image: url("../img/areas-practica.jpg");
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
 			height: 20em;
 			position: relative;
 
 			@include above(760px) {
 				height: 30em;
+				margin: 0 auto;
+			}
+
+			@include above(1000px) {
+				background-image: url("../img/areas-practica-desktop.jpg");
+				background-size: 1373px auto;
+				background-position: center top;
+				height: 432px;
+			}
+
+			@include above(1500px) {
+				background-image: url("../img/areas-practica-big.jpg");
+				background-size: 1980px auto;
+				height: 498px;
 			}
 		}
 		&-content {
-			@include gradient(to bottom, $topGrad);
-			margin-top: -3em;
+			margin-top: -64px;
 			position: relative;
 			z-index: 1;
-			padding: 1em;
+			padding: 24px 1em 0.5em;
+
+			@include above(1200px) {
+				margin-top: -108px;
+			}
+
+			&:before {
+				background: url("../img/areas-practica-grad.png");
+				background-size: contain;
+				content: "";
+				position: absolute;
+				top: 0;
+				width: 100%;
+				left: 0;
+				height: 66px;
+
+				@include above(760px) {
+					height: 110px;
+				}
+			}
+
+			.ap-ttt {
+				padding-bottom: 24px;
+				position: relative;
+
+				@include above(1200px) {
+					padding-top: 9px;
+					padding-bottom: 12px;
+				}
+			}
 		}
 		&-item {
 			margin-bottom: 1.2em;
@@ -44,6 +111,13 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 			.ap-btn {
 				max-width: 20em;
 				margin: auto;
+
+				@include above(1200px) {
+					max-width: 100%;
+					padding: 13.5px 0;
+					font-size: 1.5em;
+					font-weight: 700;
+				}
 			}
 
 			@include above(760px) {
@@ -52,11 +126,20 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 				margin-left: 1.6em;
 			}
 			@include above(1000px) {
-				width: 19.6em
+				width: 19.6em;
 			}
 
+			&:first-child,
+			&:nth-child(4),
+			&:nth-child(7) {
+				@include above(1200px) {
+					margin: 0;
+				}
+			}
 
-
+			@include above(1200px) {
+				width: 26em;
+			}
 		}
 
 		&-list {
@@ -71,7 +154,11 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 			}
 			@include above(1000px) {
 				max-width: 64em;
-				font-size: 1.2em
+				font-size: 1.2em;
+			}
+
+			@include above(1200px) {
+				max-width: 82em;
 			}
 		}
 
@@ -79,6 +166,24 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 			@include above(760px) {
 				padding-top: 0.4em;
 				padding-right: 1em;
+			}
+
+			.ap-btn-link {
+				text-transform: uppercase;
+				font-weight: 700;
+				width: 8em;
+
+				@include above(1200px) {
+					font-size: 12px;
+					width: 108px;
+				}
+
+				.icon {
+					@include above(1200px) {
+						height: 2.4em;
+						width: 1.8em;
+					}
+				}
 			}
 		}
 
@@ -96,7 +201,12 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 			@include above(760px) {
 				max-width: 48em;
 				margin: 0 auto;
-				padding: 4em 1em
+				padding: 4em 1em;
+			}
+
+			@include above(1200px) {
+				max-width: 869px;
+				padding: 54px 1em 110px;
 			}
 			.ap-prtc {
 				&-detail {
@@ -106,17 +216,44 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 			}
 		}
 		&-detail {
+			position: relative;
+			padding-bottom: 34px;
+
+			&:after {
+				background-color: $orange;
+				content: "";
+				width: 6em;
+				height: 4px;
+				position: absolute;
+				bottom: 1em;
+			}
+
+			@include above(1200px) {
+				max-width: 610px;
+			}
 			.ap-tttt {
 				font-weight: $tt;
 				color: $txt;
 				font-size: 1.8em;
 				font-weight: 800;
 				margin-bottom: 0.4em;
+
+				@include above(1200px) {
+					font-size: 30.5px;
+					line-height: 30px;
+					margin-bottom: 36px;
+				}
 			}
 
 			.ap {
 				&-txt {
 					padding-bottom: 1em;
+					line-height: 1.6em;
+
+					@include above(1200px) {
+						font-size: 15px;
+						padding-bottom: 24px;
+					}
 
 					&--bold {
 						font-weight: 700;
@@ -127,14 +264,26 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 			&-list {
 				padding-left: 1em;
 				display: flex;
-				flex-direction: row;
+				flex-direction: column;
 				justify-content: flex-start;
-				flex-wrap: wrap;
 				width: 100%;
+
+				// @include above(1900px) {
+				// 	flex-direction: column;
+				// }
+
+				&--wrap {
+					flex-wrap: wrap;
+					flex-direction: row;
+
+					// @include above(1900px) {
+					// 	flex-direction: column;
+					// }
+				}
 			}
 
 			&-item {
-				margin-bottom: .6em;
+				margin-bottom: 0.6em;
 				position: relative;
 				width: 100%;
 
@@ -144,19 +293,25 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 				}
 
 				&:before {
-					content: '';
-					border: 1px solid $orange;
+					content: "";
+					border: none;
 					position: absolute;
-					width: 3px;
-					height: 3px;
-					left: -1.2em;
+					width: 4px;
+					height: 4px;
+					left: -10px;
 					border-radius: 1.2em;
-					top: 50%;
-					margin-top: -0.2em;
+					top: 0;
+					margin-top: 8px;
+					background-color: #e75400;
 				}
 
 				&:last-child {
-					margin-bottom: 0
+					margin-bottom: 0;
+				}
+
+				@include above(1200px) {
+					font-size: 15px;
+					padding: 0;
 				}
 			}
 		}
@@ -166,7 +321,8 @@ $topGrad: #FFF, rgba(255,255,255,.2);
 			height: 100%;
 			z-index: 1;
 			bottom: 0;
-			left: 0;
+			left: 4em;
+			opacity: 0.4;
 
 			.icon {
 				fill: #e9e9e9;

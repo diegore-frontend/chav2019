@@ -15,10 +15,16 @@ $ffamily: 'Open Sans', sans-serif;// Global font
 		text-align: center;
 		font-size: 2.4em;
 		padding: .4em;
+		color: #0f0f0f;
 
 		@include above(1000px) {
 			font-size: 3.6em;
 			padding: 0.8em 0;
+		}
+
+		@include above(1000px) {
+			font-size: 52px;
+			padding: 8px
 		}
 
 		&--inside {

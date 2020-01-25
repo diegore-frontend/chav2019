@@ -1,0 +1,27 @@
+extend ../layout/_layout
+
+block content
+	article.ap-practica.ap-prtc.ap-practica-index
+		.ap-prtc-desc
+			nav.ap-prtc-nav
+				a.ap-btn-link(href="areas-practica.html")
+					svg.icon
+						use(xlink:href="#left")
+
+					| Regresar
+
+			article.ap-prtc-detail
+				h3.ap-tttt Protección al Consumidor
+
+				p.ap-txt En materia de protección al consumidor ofrecemos asesoría técnica y jurídica en la defensa de sus derechos, a través de:
+
+				ul.ap-prtc-detail-list
+					li.ap-prtc-detail-item Quejas y denuncias contra prácticas abusivas en el mercado de bienes y servicios.
+					li.ap-prtc-detail-item Procedimientos conciliatorios.
+					li.ap-prtc-detail-item Arbitraje.
+					li.ap-prtc-detail-item Contratos de adhesión.
+					li.ap-prtc-detail-item Acciones legales ante autoridades judiciales y administrativas.
+
+		figure.ap-prtc-justice
+			svg.icon
+				use(xlink:href="#justice")

@@ -20,6 +20,15 @@
 					border-color: $base;
 				}
 			}
+
+			&:hover {
+				@include above(1000px) {
+					.ap-nav-item {
+						color: $base;
+						border-color: $base;
+					}
+				}
+			}
 		}
 		&-item {
 			color: $txt;
@@ -29,6 +38,7 @@
 			margin-right: .6em;
 			display: inline-block;
 			text-transform: uppercase;
+			transition: .30s ease-in-out;
 		}
 	}
 }

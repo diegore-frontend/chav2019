@@ -5,7 +5,10 @@ block content
 		include ../partials/part.home-slider.pug
 		article.ap-slider-info
 			.ap-slider-flx
-				h1.ap-tt Cuanto más duro es el conflicto, más glorioso es el triunfo.
+				h1.ap-tt
+					| Cuanto más duro es el conflicto,
+					span más glorioso
+					span es el triunfo.
 					small.ap-tt--small Thomas Paine
 
 				nav.ap-slider-nav
@@ -17,5 +20,5 @@ block content
 						a.ap-intro-close.ap-txt-link(href="#") Entrar
 						a.ap-intro-close.ap-txt-link(href="#") Enter
 
-	section.ap-home-wrapp
+	section.ap-home-wrapp.ap-home-wrapp--init
 		include ../partials/part.areas-navigation.pug

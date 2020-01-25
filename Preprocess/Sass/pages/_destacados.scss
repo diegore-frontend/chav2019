@@ -5,6 +5,10 @@
 				background-color: $base;
 				padding: 1em 0;
 				text-align: center;
+
+				@include above(1000px) {
+					padding: 23px 0 17px;
+				}
 			}
 
 			&-link {
@@ -14,14 +18,17 @@
 				font-size: 1.2em;
 			}
 			&-content {
-				padding: 1em
+				padding: 1em;
 			}
 
 			&-item {
+				@include above(1000px) {
+					margin: 0 16px;
+				}
 				&--current {
 					.ap-tabs-link {
 						font-weight: 700;
-						color: #FFF;
+						color: #fff;
 					}
 				}
 			}
@@ -33,10 +40,100 @@
 			display: flex;
 			flex-wrap: wrap;
 
-
 			@include above(1000px) {
 				max-width: 80em;
 				margin: 0 auto;
+				justify-content: center;
+			}
+		}
+
+		&--first {
+			@include above(1000px) {
+				padding: 50px 0 142px;
+			}
+
+			.ap-tab-flx {
+				@include above(1000px) {
+					max-width: 750px;
+					margin: 0 auto;
+					justify-content: space-between;
+				}
+			}
+
+			.ap-ttt {
+				&--link {
+					min-height: 3em;
+					@include above(1000px) {
+						margin-top: 6px;
+						font-size: 24px;
+						max-width: 200px;
+					}
+				}
+			}
+			.ap-post-link {
+				color: $txt;
+			}
+		}
+
+		&--secnd {
+			@include above(1000px) {
+				padding: 50px 0 5px;
+			}
+
+			.ap-ttt {
+				&--link {
+					@include above(1000px) {
+						font-size: 21.2px;
+						line-height: 25.8px;
+						margin-top: 5px;
+					}
+				}
+			}
+
+			.ap-post {
+				@include above(1000px) {
+					margin-bottom: 40px;
+				}
+			}
+
+			.ap-tab-flx {
+				@include above(1000px) {
+					max-width: 750px;
+					margin: 0 auto;
+					justify-content: space-between;
+				}
+			}
+		}
+
+		&--third {
+			@include above(1000px) {
+				padding: 50px 0 5px;
+			}
+
+			.ap-ttt {
+				&--link {
+					font-size: 17.2px;
+					letter-spacing: -0.5px;
+					margin-top: 16px;
+
+					@include above(1000px) {
+						line-height: 25.8px;
+					}
+				}
+			}
+
+			.ap-post {
+				@include above(1000px) {
+					margin-bottom: 40px;
+				}
+			}
+
+			.ap-tab-flx {
+				@include above(1000px) {
+					max-width: 750px;
+					margin: 0 auto;
+					justify-content: space-between;
+				}
 			}
 		}
 	}
@@ -51,13 +148,13 @@
 			content: "";
 			position: absolute;
 			width: 5em;
-			height: .1em;
+			height: 0.1em;
 			background-color: $orange;
 			bottom: 0;
 		}
 
 		@include above(760px) {
-			width:32%
+			width: 32%;
 		}
 
 		&-info {
@@ -68,17 +165,21 @@
 
 		&-img {
 			img {
-				width: 100%
+				width: 100%;
 			}
 		}
 
 		.ap {
 			&-ttt--link {
-				margin-top: .6em
+				// margin-top: .6em
 			}
 			&-txt {
-				margin-top: .6em;
+				margin-top: 0.6em;
 				color: $txt;
+
+				@include above(1000px) {
+					font-size: 15px;
+				}
 
 				&--date {
 					color: #c3c3c3;

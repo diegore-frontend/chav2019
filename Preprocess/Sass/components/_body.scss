@@ -8,7 +8,7 @@ body {
 }
 
 html {
-	@media screen and (min-width: 480px) and (max-width: 896px) and (orientation: landscape) {
+	@media screen and (min-width: 480px) and (max-width: 896px) and (orientation: landscape) and (max-height: 500px) {
 		transform: rotate(-90deg);
 		transform-origin: left top;
 		width: 100vh;

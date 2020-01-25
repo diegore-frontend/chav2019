@@ -1,7 +1,18 @@
 .ap {
 	&-contact {
 		background-color: $gray;
-		padding: 0 1em 4em
+		padding: 0 1em 4em;
+
+		@include above(1200px) {
+			padding: 0 1em 76px;
+		}
+
+		.ap-ttt {
+			@include above(1200px) {
+				padding-top: 54px;
+				padding-bottom: 30px;
+			}
+		}
 	}
 	&-cntc {
 		&-flx {
@@ -14,6 +25,11 @@
 				margin: 0 auto;
 				padding: 0 1em;
 			}
+
+			@include above(1200px) {
+				width: 792px;
+				padding: 0;
+			}
 		}
 
 		&-info {
@@ -25,11 +41,32 @@
 				margin-bottom: 0;
 			}
 
+			@include above(1200px) {
+				padding: 24px 0 0 44px;
+				width: 760px;
+				margin-right: 60px;
+			}
+
 			&-sect {
 				display: flex;
 				flex-direction: row;
 				align-items: flex-start;
-				margin-bottom: 1em
+				margin-bottom: 1em;
+
+				&:nth-child(2) {
+					@include above(1200px) {
+						margin-top: 44px
+					}
+				}
+				&:nth-child(3) {
+					.ap-cntc-data {
+						@include above(1200px) {
+							margin-top: 20px;
+							line-height: 22px;
+						}
+					}
+
+				}
 			}
 		}
 
@@ -45,15 +82,58 @@
 				height: 1em;
 				margin: 0 auto;
 			}
+			&--place {
+				@include above(1200px) {
+					font-size: 40px;
+					    width: 50px;
+					    margin-right: 12px;
+				}
+			}
+			&--envelope {
+				@include above(1200px) {
+					font-size: 28px;
+					width: 50px;
+					margin-right: 12px;
+					line-height: 46px;
+				}
+			}
+			&--phone {
+				@include above(1200px) {
+					font-size: 28px;
+					    width: 50px;
+					    margin-right: 12px;
+					    line-height: 76px;
+				}
+			}
 		}
 
 		&-data {
-			width: calc(100% - 3em)
+			width: calc(100% - 3em);
+
+			@include above(1200px) {
+				font-size: 15px;
+			}
+
+			.ap-txt {
+				@include above(1200px) {
+					line-height: 22px;
+				}
+				&-link {
+					@include above(1200px) {
+						margin-top: 8px;
+						display: block;
+					}
+				}
+			}
 		}
 
 		// Form
 		&-form {
 			width: 100%;
+
+			@include above(1200px) {
+				font-size: 15px
+			}
 		}
 	}
 }

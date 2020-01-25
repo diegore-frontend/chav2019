@@ -1,21 +1,16 @@
 .ap {
 	&-lawyers {
-		background-color: $base;
-
 		&-panel {
 			@include above(760px) {
+				background-color: $base;
 				display: flex;
 				flex-direction: row;
 				justify-content: center;
 				height: 32em;
 			}
 			@include above(1000px) {
-				height: 40em;
+				height: 590px;
 				margin: 0 auto;
-			}
-
-			@include above(1600px) {
-				height: 54em;
 			}
 		}
 	}
@@ -23,6 +18,40 @@
 	&-lawyer {
 		position: relative;
 		overflow: hidden;
+
+		// Backgraund
+		&--carlos {
+			.ap-lawyer-img {
+				background: url('../img/img-carlos.jpg') no-repeat;
+				background-size: 686px auto;
+				background-position: right;
+			}
+
+			.ap-lawyer-overlay {
+				@include above(1100px) {
+					left: inherit;
+					right: 0
+				}
+			}
+
+			.ap-lawyer-button {
+				@include above(1100px) {
+					transform: translateX(36px);
+				}
+			}
+		}
+		&--mauricio {
+			.ap-lawyer-img {
+				background: url('../img/img-mauricio.jpg') no-repeat;
+				background-size: 686px auto;
+			}
+		}
+
+		&:nth-child(2) {
+			@include above(760px) {
+				transform: translateX(-2px);
+			}
+		}
 
 		@include above(760px) {
 			width: 100%;
@@ -34,10 +63,13 @@
 		&-page {
 			overflow: hidden;
 
-			@include above(1600px) {
-				height: calc(100vh - 18em);
+			@include above(1000px) {
+				height: 520px;
 			}
 
+			@include above(1200px) {
+				height: 592px
+			}
 
 			.ap-lawyer-square {
 				height: 26.8em;
@@ -58,21 +90,119 @@
 				}
 
 				@include above(1000px) {
-					height: 40em;
+					height: 520px;
+					margin: 0 auto;
 				}
 
-				@include above(1600px) {
-					height: 100%;
+				@include above(1200px) {
+					height: 592px;
+					margin: 0 auto;
+				}
+
+				&-data {
+					padding-left: 35px;
+					padding-top: 33px;
+					display: block;
+
+					@include above(1100px) {
+						padding-top: 44px
+					}
+
+					&-icon {
+						@include above(1200px) {
+							font-size: 10px;
+							margin-bottom: 10px;
+						}
+					}
+
+					&-info {
+						padding-top: 20px
+					}
+				}
+
+				.ap-tt {
+					font-size: 50px;
+					letter-spacing: 5px;
+					line-height: 61px;
+					&--small {
+						letter-spacing: 1px;
+						line-height: 30px;
+					}
+				}
+
+				&-nav {
+					@include above(1100px) {
+						margin-bottom: 26px
+					}
+				}
+
+				&-desc {
+					.ap-txt {
+						@include above(1100px) {
+							padding-bottom: 30px;
+							font-size: 14px;
+							line-height: 20px;
+						}
+
+						&--bold {
+							@include above(1100px) {
+								padding-bottom: 8px;
+								font-size: 17.3px;
+							}
+						}
+					}
+				}
+			}
+
+			.ap-btn-link {
+				text-transform: uppercase;
+				font-weight: 700;
+
+				@include above(1100px) {
+					font-size: 12px;
+					width: 108px;
 				}
 			}
 
 			&--mauricio {
+				.ap-lawyer-bg {
+					background: $base;
+					opacity: 1;
+				}
 				.ap-lawyer {
 					flex-direction: row-reverse;
 				}
 
 				.ap-lawyer-info {
 					align-items: flex-end;
+
+					@include above(1100px) {
+						padding: 33px 80px 0 0
+					}
+				}
+			}
+
+			&--carlos {
+				.ap-lawyer {
+
+					&-bg{
+						background: $base;
+						opacity: 1;
+					}
+
+					&-overlay {
+						@include above(1100px) {
+							left: inherit;
+							right: 0
+						}
+					}
+
+					&-data {
+						@include above(1100px) {
+							padding-left: 35px;
+							padding-top: 43px
+						}
+					}
 				}
 			}
 		}
@@ -95,26 +225,38 @@
 			text-transform: uppercase;
 			font-size: 3em;
 
+			@include above(1100px) {
+				font-size: 61px;
+				letter-spacing: 5px;
+				line-height: 61px;
+			}
+
 			&--small {
 				display: block;
 				font-weight: 400;
 				font-size: .6em;
+
+
+				@include above(1100px) {
+					letter-spacing: 1px;
+				}
 			}
 		}
 
 		&-bg {
-			background: url('../img/pattern.png') rgba($base, .2);
+			background: url('../img/pattern.png');
 			position: absolute;
 			left: 0;
 			top: 0;
 			right: 0;
 			bottom: 0;
-			opacity: 1;
+			opacity: .2;
 		}
 
 		&-img {
 			width: 100%;
 			position: relative;
+			height: 100%;
 
 			img {
 				width: 100%
@@ -140,7 +282,12 @@
 			flex-direction: column;
 			justify-content: flex-end;
 			align-items: center;
-			padding-bottom: 2.8em
+			padding-bottom: 2.8em;
+
+			@include above(1100px){
+				padding-bottom: 100px;
+				width: 650px;
+			}
 		}
 
 		&-info {
@@ -151,6 +298,11 @@
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
+			}
+
+			@include above(1100px) {
+				width: 650px;
+				padding: 33px 0 0 44px;
 			}
 
 			&-area {
@@ -167,6 +319,10 @@
 			.ap-scroll {
 				height: calc(100% - 2.8em);
 				padding: 0 1.2em 0 0;
+
+				@include above(1000px){
+					height: calc(100% - 4.8em);
+				}
 			}
 		}
 
@@ -194,6 +350,11 @@
 			overflow: hidden;
 			margin: 0 auto 1.6em;
 
+			@include above(1100px) {
+				font-size: 24px;
+				margin-bottom: 10px;
+			}
+
 			img {
 				width: 100%
 			}
@@ -214,6 +375,8 @@
 			@include above(1000px) {
 				font-size: 1.12em;
 			}
+
+
 
 			.icon {
 				width: 100%;
@@ -258,24 +421,34 @@
 			position: relative;
 			z-index: 2;
 
-			@include above(1200px) {
-				font-size: 1.6em;
+			@include above(1100px) {
+				max-width: 400px;
+				transform: translateX(13px);
 			}
 
 			.ap-btn-outline {
-				border: 1px solid #FFF;
-				color: #FFF;
+				border: 1px solid #fff;
+				color: #fff;
 				display: block;
-				margin-top: 1.4em;
-				padding: 0.6em;
-				border-radius: 0.2em;
-				transition: .30s linear;
+				margin-top: 3.4em;
+				padding: .6em;
+				border-radius: .2em;
+				transition: .3s linear;
+				font-weight: 700;
+				font-size: 1.6em;
 
 				&:hover {
 					@include above(1000px) {
 						background-color: #FFF;
 						color: $base;
 					}
+				}
+
+				@include above(1100px) {
+					max-width: 304px;
+					padding: 11px;
+					font-size: 21px;
+					margin: 35px auto 0;
 				}
 			}
 		}

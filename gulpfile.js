@@ -135,42 +135,42 @@ gulp.task('prettifypages', () => {
 			indent_char: ' ',
 			unformatted: ['script', 'svg', 'css']
 		}))
-		.pipe(gulp.dest('html'))
+		.pipe(gulp.dest('.'))
 		.pipe(browserSync.reload({stream: true}))
 });
 
 // Minification Images
-gulp.task('images', () =>{
-	var streamAssets = gulp.src([dev_path.img + '**/*'])
-		.pipe(plumber())
-		.pipe(gulpif(isProduction, imagemin([
-			imagemin.gifsicle({interlaced: true}),
-			imagemin.jpegtran({progressive: true}),
-			imagemin.optipng({optimizationLevel: 5}),
-			imagemin.svgo({
-					plugins: [
-						{removeViewBox: true},
-						{cleanupIDs: false}
-					]
-				})
-			])
-		))
+// gulp.task('images', () =>{
+// 	var streamAssets = gulp.src([dev_path.img + '**/*'])
+// 		.pipe(plumber())
+// 		.pipe(gulpif(isProduction, imagemin([
+// 			imagemin.gifsicle({interlaced: true}),
+// 			imagemin.jpegtran({progressive: true}),
+// 			imagemin.optipng({optimizationLevel: 5}),
+// 			imagemin.svgo({
+// 					plugins: [
+// 						{removeViewBox: true},
+// 						{cleanupIDs: false}
+// 					]
+// 				})
+// 			])
+// 		))
 
-	if (isNetcore === true) {
-		streamAssets = streamAssets
-			.pipe(gulp.dest(PATHS.outNetcore + 'img'))
-			.pipe(browserSync.stream());
-	}
-	else {
-		streamAssets = streamAssets
-			.pipe(gulp.dest(PATHS.outMvc + 'img'))
-			.pipe(browserSync.stream());
-	}
+// 	if (isNetcore === true) {
+// 		streamAssets = streamAssets
+// 			.pipe(gulp.dest(PATHS.outNetcore + 'img'))
+// 			.pipe(browserSync.stream());
+// 	}
+// 	else {
+// 		streamAssets = streamAssets
+// 			.pipe(gulp.dest(PATHS.outMvc + 'img'))
+// 			.pipe(browserSync.stream());
+// 	}
 
-	streamAssets = streamAssets.pipe(notify('Images optimized'));
+// 	streamAssets = streamAssets.pipe(notify('Images optimized'));
 
-	return streamAssets;
-});
+// 	return streamAssets;
+// });
 
 // Static Server + watching scss/html files
 gulp.task('default', () => {

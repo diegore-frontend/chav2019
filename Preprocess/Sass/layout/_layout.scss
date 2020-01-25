@@ -50,12 +50,65 @@
 		}
 
 		@include above(1200px) {
-			max-width: 90em
+			max-width: 94em
 		}
 	}
 	&-scroll {
 		position: relative;
 		overflow: hidden;
+	}
+
+	&-overlay {
+		background-color: #fff;
+		position: fixed;
+		display: none;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 200;
+	}
+	&-load {
+		&-area {
+			height: 100%;
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.ap-txt {
+				font-size: 2em;
+
+				span {
+					animation: 1.4s blink both infinite;
+
+					&:nth-child(2) {
+						animation-delay: .2s;
+					}
+					&:nth-child(3) {
+						animation-delay: .4s;
+					}
+				}
+			}
+		}
+		&-img {
+			width: 10em;
+			height: 8.4em;
+
+			.icon {
+				fill: $base;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	&-modal--is-visible {
+		display: block;
+	}
+	&-main {
+		transition: .30s ease-in;
+		opacity: 0;
 	}
 }
 
@@ -64,4 +117,16 @@
 	height: 0;
 	display: none;
 
+}
+
+@keyframes blink {
+	0% {
+		opacity: .2;
+	}
+	20% {
+		opacity: 1;
+	}
+	100% {
+		opacity: .2;
+	}
 }
