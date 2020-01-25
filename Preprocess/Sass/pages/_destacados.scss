@@ -18,7 +18,7 @@
 				font-size: 1.2em;
 			}
 			&-content {
-				padding: 1em
+				padding: 1em;
 			}
 
 			&-item {
@@ -28,7 +28,7 @@
 				&--current {
 					.ap-tabs-link {
 						font-weight: 700;
-						color: #FFF;
+						color: #fff;
 					}
 				}
 			}
@@ -39,7 +39,6 @@
 		&-flx {
 			display: flex;
 			flex-wrap: wrap;
-
 
 			@include above(1000px) {
 				max-width: 80em;
@@ -53,7 +52,6 @@
 				padding: 50px 0 142px;
 			}
 
-
 			.ap-tab-flx {
 				@include above(1000px) {
 					max-width: 750px;
@@ -64,6 +62,7 @@
 
 			.ap-ttt {
 				&--link {
+					min-height: 3em;
 					@include above(1000px) {
 						margin-top: 6px;
 						font-size: 24px;
@@ -71,13 +70,15 @@
 					}
 				}
 			}
+			.ap-post-link {
+				color: $txt;
+			}
 		}
 
 		&--secnd {
 			@include above(1000px) {
 				padding: 50px 0 5px;
 			}
-
 
 			.ap-ttt {
 				&--link {
@@ -109,13 +110,14 @@
 				padding: 50px 0 5px;
 			}
 
-
 			.ap-ttt {
 				&--link {
+					font-size: 17.2px;
+					letter-spacing: -0.5px;
+					margin-top: 16px;
+
 					@include above(1000px) {
-						font-size: 21.2px;
 						line-height: 25.8px;
-						margin-top: 5px;
 					}
 				}
 			}
@@ -146,13 +148,13 @@
 			content: "";
 			position: absolute;
 			width: 5em;
-			height: .1em;
+			height: 0.1em;
 			background-color: $orange;
 			bottom: 0;
 		}
 
 		@include above(760px) {
-			width:32%
+			width: 32%;
 		}
 
 		&-info {
@@ -163,7 +165,7 @@
 
 		&-img {
 			img {
-				width: 100%
+				width: 100%;
 			}
 		}
 
@@ -172,11 +174,12 @@
 				// margin-top: .6em
 			}
 			&-txt {
-				margin-top: .6em;
+				margin-top: 0.6em;
 				color: $txt;
 
 				@include above(1000px) {
-					font-size: 15px;				}
+					font-size: 15px;
+				}
 
 				&--date {
 					color: #c3c3c3;
