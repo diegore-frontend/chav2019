@@ -3,11 +3,11 @@
 		position: relative;
 
 		&:before {
-			content: '';
+			content: "";
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background: url('../img/pattern.png') rgba(#00182f, .5);
+			background: url("../img/pattern.png") rgba(#00182f, 0.5);
 			z-index: 12;
 			pointer-events: none;
 		}
@@ -23,7 +23,7 @@
 			position: relative;
 			z-index: 3;
 			height: calc(100% - 12.8em);
-			background-color: #FFF;
+			background-color: #fff;
 
 			.ap-tt {
 				color: $txt;
@@ -31,25 +31,23 @@
 				text-transform: uppercase;
 				line-height: 1em;
 
-				@media screen and (min-width: 760px) and (max-width: 1024px) and (orientation: portrait) {
-					font-size: 4em;
-				}
+				// @media screen and (min-width: 760px) and (max-width: 1024px) and (orientation: portrait) {
+				// 	font-size: 4em;
+				// }
 
-				@include above(1000px) {
-					font-size: 54px
-				}
+				// @include above(1000px) {
+				// 	font-size: 54px
+				// }
 
-				@include above(800px) {
-					line-height: 1.2em;
-					max-width: 11em;
-					color: #FFF;
-					font-size: 4em;
-				}
+				// @include above(800px) {
+				// 	line-height: 1.2em;
+				// 	max-width: 11em;
+				// 	color: #FFF;
+				// 	font-size: 4em;
+				// }
 
 				span {
-					@include above(1000px) {
-						display: block;
-					}
+					display: block;
 				}
 
 				&--small {
@@ -60,14 +58,14 @@
 					position: relative;
 
 					&:before {
-						content: '';
+						content: "";
 						position: absolute;
 						background-color: $orange;
 						height: 2px;
 						width: calc(100% - 7.8em);
 						right: 0;
 						bottom: 50%;
-						margin-bottom: -0.4em
+						margin-bottom: -0.4em;
 					}
 
 					@include above(800px) {
@@ -114,7 +112,6 @@
 				padding-bottom: 4em;
 				justify-content: space-between;
 			}
-
 		}
 		&-home {
 			position: fixed;
@@ -135,7 +132,7 @@
 				padding: 1em;
 
 				@include above(1000px) {
-					padding: 36px 1em 1em
+					padding: 36px 1em 1em;
 				}
 			}
 			.ap-txt-link {
@@ -149,20 +146,20 @@
 				&:nth-child(2) {
 					&:before {
 						background-color: $txt;
-						content: '';
+						content: "";
 						position: absolute;
 						height: 100%;
 						width: 1px;
 						left: 0;
 
 						@include above(800px) {
-							background-color: #FFF;
-							opacity: .4
+							background-color: #fff;
+							opacity: 0.4;
 						}
 					}
 				}
 				@include above(800px) {
-					color: #FFF;
+					color: #fff;
 				}
 				@include above(1000px) {
 					font-size: 25px;
@@ -208,7 +205,7 @@
 			height: 100%;
 
 			@include above(800px) {
-				fill: #FFF;
+				fill: #fff;
 			}
 		}
 	}
